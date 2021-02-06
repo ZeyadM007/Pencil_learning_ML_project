@@ -65,6 +65,7 @@ model_alt.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metr
 
 history = model_alt.fit(alternate_training, ys, epochs=2, verbose=1)
 
+#This function outputs the next 100 predicted words
 def predict_sentence_alt(word):
     for _ in range(100):
         token_list = tokenizer.texts_to_sequences([word])[0]
